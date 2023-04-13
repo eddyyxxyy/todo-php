@@ -1,0 +1,24 @@
+{
+    "name": "edson/todo",
+    "description": "Single page ToDo application",
+    "type": "project",
+    "require-dev": {
+        "vlucas/phpdotenv": "5.5.x-dev",
+        "squizlabs/php_codesniffer": "*",
+        "friendsofphp/php-cs-fixer": "*"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Edson\\Todo\\": "src/"
+        },
+        "files": []
+    },
+    "authors": [
+        {
+            "name": "Edson Pimenta",
+            "email": "edson.tibo@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
