@@ -1,5 +1,5 @@
 {
-    "name": "edson/todo",
+    "name": "eddyyxxyy/todo",
     "description": "Single page ToDo application",
     "type": "project",
     "require-dev": {
@@ -10,14 +10,17 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Edson\\Todo\\": "src/"
+            "App\\": "src/"
         },
-        "files": []
+        "files": [
+            "src/helpers/constants.php",
+            "src/helpers/filter_string_polyfill.php"
+        ]
     },
     "authors": [
         {
             "name": "Edson Pimenta",
-            "email": "edson.tibo@gmail.com"
+            "email": "dev.eddyyxxyy@gmail.com"
         }
     ],
     "minimum-stability": "dev"
