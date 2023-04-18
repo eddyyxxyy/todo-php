@@ -8,6 +8,12 @@ class Home
 {
     public function index(array $params)
     {
-        return "Teste";
+        return [
+            'view' => 'home.php',
+            'css' => 'home.css',
+            'data' => [
+                'title' => 'ToDo FlashCards - eddyyxxyy',
+            ],
+        ];
     }
 }
