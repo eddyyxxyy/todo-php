@@ -8,34 +8,21 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
     <link rel="manifest" href="./assets/img/site.webmanifest">
+    <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href=<?php echo "./assets/css/{$css}"; ?>>
     <title><?php echo $title; ?></title>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">ToDo</div>
-        <ul class="nav-links">
-            <input type="checkbox" id="checkbox_toggle">
-            <label for="checkbox_toggle" class="hamburguer">&#9776;</label>
-        </ul>
-        <div class="menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
-            <li class="tasks">
-                <a href="/">Options</a>
-                <ul class="dropdown">
-                    <?php if (!LOGGED) : ?>
-                        <li><a href="/">Login</a></li>
-                        <li><a href="/">Register</a></li>
-                    <?php else : ?>
-                        <li><a href="/">My Tasks</a></li>
-                        <li><a href="/">Profile</a></li>
-                        <li><a href="/">Logout</a></li>
-                    <?php endif ; ?>
-                </ul>
-            </li>
-            <li><a href="/">Contact</a></li>
-        </div>
-    </nav>
+    <header>
+        <img class="logo" src="./assets/img/android-chrome-512x512.png" alt="ToDo's app logo" height="50px">
+        <nav>
+            <ul class="navlinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="cta"><button>Source Code</button></a>
+    </header>
 </body>
 </html>
