@@ -19,6 +19,7 @@ class Router
     private $routes = [
         'GET' => [
             '/' => 'Home@index',
+            '/about' => 'About@index',
             '/login' => 'Login@index',
             '/logout' => 'Login@logout',
             '/user/[0-9]+' => 'User@index',

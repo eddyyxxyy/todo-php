@@ -16,7 +16,7 @@ function check_data(array $data): bool
         !isset($data['data']['title']) ||
         !isset($data['view']) ||
         !isset($data['css']) ||
-        !file_exists(VIEWS_PATH . "\\partials\\{$data['view']}")
+        !file_exists(VIEWS_PATH . "\\{$data['view']}")
     ) {
         return false;
     }
