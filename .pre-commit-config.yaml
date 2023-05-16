@@ -25,4 +25,4 @@ repos:
         args: [--standard=PSR12 -p]
       - id: php-cs-fixer
         files: \.(php)$
-        args: [-vv, --rules=@PSR12, --config=.php-cs-fixer.phar]
+        args: [-vv, --config=.php-cs-fixer.dist.php]
