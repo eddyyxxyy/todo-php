@@ -13,16 +13,11 @@
     <title><?php echo $title; ?></title>
 </head>
 <body>
-    <header>
-        <img class="logo" src="./assets/img/android-chrome-512x512.png" alt="ToDo's app logo" height="50px">
-        <nav>
-            <ul class="navlinks">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-        <a href="#" class="cta"><button>Source Code</button></a>
+    <header id="main-nav">
+        <?php require 'partials/nav-header.php'; ?>
     </header>
+    <main>
+        <?php require $view; ?>
+    </main>
 </body>
 </html>

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
+use App\Database\DatabaseOps;
+
 class Home
 {
     public function index(array $params)
@@ -12,7 +14,7 @@ class Home
             'view' => 'home.php',
             'css' => 'home.css',
             'data' => [
-                'title' => 'ToDo FlashCards - eddyyxxyy',
+                'title' => 'ToDo FlashCards | eddyyxxyy',
             ],
         ];
     }

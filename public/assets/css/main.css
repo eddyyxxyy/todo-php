@@ -6,9 +6,9 @@
     padding: 0;
 }
 
-li,
-a,
-button {
+#main-nav li,
+#main-nav a,
+#main-nav button {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -16,7 +16,7 @@ button {
     text-decoration: none;
 }
 
-button {
+#main-nav button {
     padding: 9px 25px;
     background-color: rgba(0, 136, 169, 1);
     border: none;
@@ -25,35 +25,35 @@ button {
     transition: all 0.3s ease 0s;
 }
 
-button:hover {
+#main-nav button:hover {
     background-color: rgba(0, 136, 169, 0.5);
 }
 
-header {
+#main-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-    background-color: #6096b4;
+    background-color: #00326b;
 }
 
-.logo {
+#main-nav .logo {
     cursor: pointer;
 }
 
-.navlinks {
+#main-nav .navlinks {
     list-style: none;
 }
 
-.navlinks li {
+#main-nav .navlinks li {
     display: inline-block;
     padding: 0px 20px;
 }
 
-.navlinks li a {
+#main-nav .navlinks li a {
     transition: all 0.3s ease 0s;
 }
 
-.navlinks li a:hover {
+#main-nav .navlinks li a:hover {
     color: #bdcdd6;
 }
