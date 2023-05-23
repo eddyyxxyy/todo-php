@@ -2,7 +2,11 @@
 <?php echo "<nav>"; ?>
     <ul class="navlinks">
         <li><a href="/">Home</a></li>
-        <li><a href=<?php echo "/user/{$user->id}" ?>>Profile</a></li>
+        <?php if ($_SESSION['logged']) : ?>
+            <li><a href=<?php echo "/user/{$user->id}" ?>>Profile</a></li>
+        <?php else : ?>
+            <li><a href="/login">Login</a></li>
+        <?php endif; ?>
         <li><a href="/about">About</a></li>
     </ul>
 <?php echo "</nav>"; ?>

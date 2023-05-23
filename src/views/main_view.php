@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href=<?php echo "./assets/css/{$css}"; ?>>
     <title><?php echo $title; ?></title>
+    <script defer src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
 <body>
     <header id="main-nav">

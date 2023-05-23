@@ -22,13 +22,13 @@ class Router
             '/about' => 'About@index',
             '/login' => 'Login@index',
             '/logout' => 'Login@logout',
-            '/user/[0-9]+' => 'User@index',
-            '/user/create' => 'User@register',
-            '/user/remove' => 'User@unregister',
+            '/user/[0-9]+' => 'Profile@index',
+            '/user/create' => 'Profile@register',
+            '/user/remove' => 'Profile@unregister',
         ],
         'POST' => [
             '/login' => 'Login@store',
-            '/user/register' => 'User@store',
+            '/user/store' => 'Profile@store',
         ]
     ];
 
@@ -43,10 +43,48 @@ class Router
         if (!empty($matchedUri)) {
             return Controller::load($matchedUri);
         }
+
+        $matchedUri = $this->dynamicUriMatch($uri, $routes[$request_method]);
+        $params = $this->getParams($uri, $matchedUri);
+
+        dd(Controller::load($matchedUri, $params));
     }
 
-    private function exactUriMatch(string $uri, array $route): array
+    private function exactUriMatch(string $uri, array $routes): array
     {
-        return array_key_exists($uri, $route) ? [$uri => $route[$uri]] : [];
+        return array_key_exists($uri, $routes) ? [$uri => $routes[$uri]] : [];
+    }
+
+    private function dynamicUriMatch(string $uri, array $routes)
+    {
+        return array_filter(
+            $routes,
+            function ($route) use ($uri) {
+                $regex = str_replace('/', '\/', ltrim($route, '/'));
+                return preg_match("/^$regex$/", ltrim($uri, '/'));
+            },
+            ARRAY_FILTER_USE_KEY
+        );
+    }
+
+    private function getParams(string $uri, array $matchedUri)
+    {
+        $uri_exploded = explode('/', ltrim($uri, '/'));
+
+        if (!empty($matchedUri)) {
+            $params = array_diff(
+                $uri_exploded,
+                explode('/', ltrim(array_keys($matchedUri)[0], '/')),
+            );
+        } else {
+            return $matchedUri;
+        }
+
+        $params_data = array();
+        foreach ($params as $index => $param) {
+            $params_data[$uri_exploded[$index - 1]] = $param;
+        }
+
+        return $params_data;
     }
 }

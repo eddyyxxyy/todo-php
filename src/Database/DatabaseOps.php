@@ -9,9 +9,9 @@ class DatabaseOps
     public static function connect()
     {
         return new \PDO(
-            "mysql:host=localhost;dbname=todo_php",
-            'edson',
-            '123456',
+            'mysql:host=' . $_ENV['DB_HOST'] . ';dbname=' . $_ENV['DB_NAME'] . ';charset=' . $_ENV['DB_CHAR'],
+            $_ENV['DB_USER'],
+            $_ENV['DB_PASS'],
             [\PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_OBJ]
         );
     }

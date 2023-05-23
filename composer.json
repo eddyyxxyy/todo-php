@@ -15,6 +15,7 @@
         "files": [
             "src/helpers/check_data.php",
             "src/helpers/constants.php",
+            "src/helpers/dd.php",
             "src/helpers/filter_string_polyfill.php",
             "src/helpers/sessions.php"
         ]
