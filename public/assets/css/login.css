@@ -54,6 +54,7 @@ body {
 
 #login-card ul li {
     display: inline-flex;
+    margin: 10px 0;
 }
 
 #login-card ul li.active a {
@@ -85,5 +86,68 @@ a {
 }
 
 .content.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    align-self: center;
+    max-width: 400px;
+    min-width: 400px;
+    display: inherit;
+    flex-direction: inherit;
+    text-decoration: none;
+}
+
+.form > h1 {
+    margin-bottom: 3rem;
+}
+
+.form label {
+    font-size: 20px;
+    color: aliceblue;
+}
+
+input {
+    padding-top: 10px;
+    margin-bottom: 2rem;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    color: rgba(255, 255, 255, 0.789);
+    background-color: #00326b;
+    border-bottom: 2px solid rgba(0, 136, 169, 0.5);
+}
+
+input:is(:focus, :active) {
+    outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: rgba(0, 136, 169, 0.5);
+    -webkit-box-shadow: 0 0 0px rgba(0, 136, 169, 0.5) inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: aliceblue;
+}
+
+button:hover {
+    background-color: rgba(0, 136, 169, 0.5);
 }
