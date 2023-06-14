@@ -9,6 +9,7 @@ body {
     background: linear-gradient(-45deg, #6096b4, #5592b3, #146c94, #00326b);
     background-size: 400% 400%;
     animation: gradient 45s ease infinite;
+    height: 100vh;
 }
 
 @keyframes gradient {
@@ -21,4 +22,68 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+
+#login-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-top: 1.5rem;
+    color: aliceblue;
+}
+
+#form-container {
+    padding: 25px 0;
+    border: none;
+    border-radius: 15px;
+    max-width: 1000px;
+    min-width: 300px;
+    width: 700px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    background-color: #00326b;
+}
+
+#login-card ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+#login-card ul li {
+    display: inline-flex;
+}
+
+#login-card ul li.active a {
+    background-color: rgba(0, 136, 169, 0.5);
+}
+
+#login-card ul li a {
+    color: aliceblue;
+    padding: 15px 35px;
+    margin: 0 45px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+#login-card ul li a:hover {
+    background-color: rgba(0, 136, 169, 0.5);
+}
+
+a {
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
 }
