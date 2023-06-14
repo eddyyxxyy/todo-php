@@ -13,6 +13,7 @@ class Home
         return [
             'view' => 'home.php',
             'css' => 'home.css',
+            'js' => '',
             'data' => [
                 'title' => 'ToDo FlashCards | eddyyxxyy',
             ],

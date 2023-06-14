@@ -18,6 +18,7 @@ try {
 
     $view = $data['view'];
     $css = $data['css'];
+    $js = $data['js'];
 
     require VIEWS_PATH . '\\main_view.php';
 } catch (\Exception $e) {

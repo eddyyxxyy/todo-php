@@ -12,6 +12,9 @@
     <link rel="stylesheet" href=<?php echo "./assets/css/{$css}"; ?>>
     <title><?php echo $title; ?></title>
     <script defer src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <?php if (isset($js) && $js !== '') : ?>
+    <script defer src=<?= "./assets/js/{$js}"; ?>></script>
+    <?php endif ; ?>
 </head>
 <body>
     <header id="main-nav">

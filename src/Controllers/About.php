@@ -39,6 +39,7 @@ class About
         return [
             'view' => 'about.php',
             'css' => 'about.css',
+            'js' => '',
             'data' => [
                 'title' => 'About Me | eddyyxxyy',
                 'deezer_response' => $deezer_response

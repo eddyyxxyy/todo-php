@@ -11,6 +11,7 @@ class Login
         return [
             'view' => 'login.php',
             'css' => 'login.css',
+            'js' => 'login.js',
             'data' => [
                 'title' => 'Login ' . '| eddyyxxyy',
             ],

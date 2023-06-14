@@ -11,6 +11,7 @@ class Profile
         return [
             'view' => 'profile.php',
             'css' => 'profile.css',
+            'js' => '',
             'data' => [
                 'title' => 'Profile ' . '| eddyyxxyy',
             ],
