@@ -56,4 +56,5 @@
 
 #main-nav .navlinks li a:hover {
     color: #bdcdd6;
+    border-bottom: 1.5px solid #8c989e;
 }
