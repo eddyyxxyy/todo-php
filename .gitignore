@@ -475,3 +475,6 @@ composer.lock
 .php-cs-fixer.cache
 
 .env
+
+node_modules/
+package-lock.json
