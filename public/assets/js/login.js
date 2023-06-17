@@ -1,12 +1,39 @@
 "use strict";
 const as = document.querySelectorAll('.tab a');
 const contentElements = document.querySelector('.content-wrapper');
+const signUpForm = document.querySelector('form[action="/user/create"]');
 as.forEach((a) => {
     a.addEventListener('click', (e) => {
         e.preventDefault();
-        changeContent(a, 'Sign Up');
+        changeContent(a, 'Login');
     });
 });
+const verifyPassword = (isLogin = false) => {
+    var _a, _b, _c;
+    const pass = document.getElementById('password-label-sign-up').value;
+    const confirmPass = document.getElementById('confirm-password-label-sign-up').value;
+    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])(?!.*userName)(?!.*(.)\1{2,}).{8,}$/;
+    if (!isLogin) {
+        if (pass !== confirmPass ||
+            pass === '' ||
+            confirmPass === '' ||
+            !regex.test(pass)) {
+            let warning = document.createElement('h3');
+            let passTip = document.createElement('h4');
+            warning.innerText =
+                'The passwords must be equal, contain upper and lower case letters, numbers and special characters.';
+            warning.setAttribute('style', 'color: red');
+            passTip.innerText = 'Something like: P@ssw0rd!';
+            passTip.setAttribute('id', '2');
+            if (((_a = signUpForm === null || signUpForm === void 0 ? void 0 : signUpForm.lastElementChild) === null || _a === void 0 ? void 0 : _a.getAttribute('id')) !== '2') {
+                (_b = signUpForm === null || signUpForm === void 0 ? void 0 : signUpForm.lastElementChild) === null || _b === void 0 ? void 0 : _b.after(warning);
+                (_c = signUpForm === null || signUpForm === void 0 ? void 0 : signUpForm.lastElementChild) === null || _c === void 0 ? void 0 : _c.after(passTip);
+            }
+            return false;
+        }
+    }
+    return true;
+};
 const changeContent = (element, textContent) => {
     var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
     if (element.textContent === textContent) {
