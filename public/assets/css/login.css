@@ -12,6 +12,16 @@ body {
     height: 100vh;
 }
 
+h3 {
+    margin-top: 1.5rem;
+    text-decoration: underline;
+}
+
+h4 {
+    margin-top: 0.5rem;
+    color: rgb(139, 139, 139);
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
