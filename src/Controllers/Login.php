@@ -17,4 +17,10 @@ class Login
             ],
         ];
     }
+
+    public function store()
+    {
+        set_flash('message', 'Wrong password');
+        redirect('/login');
+    }
 }
