@@ -17,6 +17,8 @@
             "src/helpers/constants.php",
             "src/helpers/dd.php",
             "src/helpers/filter_string_polyfill.php",
+            "src/helpers/flash.php",
+            "src/helpers/redirect.php",
             "src/helpers/sessions.php"
         ]
     },
